@@ -1,5 +1,5 @@
 FROM eclipse-temurin:17-jdk
 WORKDIR /app
-COPY target/docker-jenkins-integration-sample.jar docker-jenkins-integration-sample.jar
+COPY target/*.jar app.jar
 EXPOSE 9090
-ENTRYPOINT ["java","-jar","docker-jenkins-integration-sample.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
